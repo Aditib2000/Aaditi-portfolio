@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aaditi Bhandari — Data Scientist & Business Analyst</title>
+<meta name="description" content="Portfolio of Aaditi Dharmendra Bhandari — Data Scientist & Business Analyst specializing in ML, statistical modeling, and data-driven decision making." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">AB<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#demo" class="nav-link" data-section="demo">Live Demo</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg id="sunIcon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 17a5 5 0 100-10 5 5 0 000 10zm0-15a1 1 0 011 1v2a1 1 0 01-2 0V3a1 1 0 011-1zm0 18a1 1 0 011 1v2a1 1 0 01-2 0v-2a1 1 0 011-1zM4.22 4.22a1 1 0 011.42 0l1.4 1.4a1 1 0 11-1.41 1.42l-1.41-1.4a1 1 0 010-1.42zm12.74 12.74a1 1 0 011.41 0l1.41 1.4a1 1 0 01-1.41 1.42l-1.41-1.4a1 1 0 010-1.42zM1 12a1 1 0 011-1h2a1 1 0 010 2H2a1 1 0 01-1-1zm18 0a1 1 0 011-1h2a1 1 0 010 2h-2a1 1 0 01-1-1zM4.22 19.78a1 1 0 010-1.42l1.41-1.4a1 1 0 111.41 1.41l-1.4 1.41a1 1 0 01-1.42 0zM16.96 6.04a1 1 0 010-1.42l1.4-1.4a1 1 0 111.42 1.41l-1.41 1.41a1 1 0 01-1.41 0z"/></svg>
+      </button>
+      <a href="assets/Aaditi_Bhandari_Resume.pdf" download class="btn btn-sm btn-outline resume-btn">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 15.5l-5-5 1.41-1.41L11 12.67V3h2v9.67l2.59-2.58L17 11.5l-5 5zM5 19h14v2H5z"/></svg>
+        Resume
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="home">
+  <canvas id="particles"></canvas>
+  <div class="hero-inner container">
+    <p class="hero-eyebrow reveal">📍 Charlotte, NC · Open to Data Science & Analytics roles</p>
+    <h1 class="hero-title reveal">
+      Hi, I'm <span class="grad-text">Aaditi Bhandari</span>
+    </h1>
+    <div class="hero-role reveal">
+      <span>I build </span><span class="typed-role" id="typedRole"></span><span class="cursor-blink">|</span>
+    </div>
+    <p class="hero-desc reveal">
+      Data Science graduate student turning messy data into forecasting models, dashboards,
+      and AI-powered tools — fluent in Python, SQL, LLM integration, and the art of a good insight.
+    </p>
+    <div class="hero-stats reveal">
+      <div class="stat"><span class="stat-num" data-target="3.9" data-decimals="1">0</span><span class="stat-label">GPA / 4.0</span></div>
+      <div class="stat"><span class="stat-num" data-target="800" data-suffix="K+">0</span><span class="stat-label">Records cleaned in one pipeline</span></div>
+      <div class="stat"><span class="stat-num" data-target="50" data-suffix="%">0</span><span class="stat-label">Cost cut via batch processing</span></div>
+      <div class="stat"><span class="stat-num" data-target="3" data-suffix="+">0</span><span class="stat-label">Roles in analytics & BI</span></div>
+    </div>
+    <div class="hero-cta reveal">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#demo" class="btn btn-outline">See Live Demo</a>
+      <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+    </div>
+    <div class="hero-social reveal">
+      <a href="https://github.com/Aditib2000" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 015.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.21.66.8.55C20.71 21.39 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/aaditibhandari/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a href="mailto:aaditibhandari6@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+</header>
+
+<main>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="container">
+    <p class="section-kicker reveal">Who I Am</p>
+    <h2 class="section-title reveal">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm a Data Science graduate student at the <strong>University of North Texas</strong> (GPA 3.9/4.0),
+          with hands-on experience across analytics, business intelligence, and applied machine learning.
+          I like problems that involve turning a pile of messy, real-world data into something a business
+          can actually act on — a dashboard, a model, a recommendation.
+        </p>
+        <p>
+          Currently I work as a <strong>Data/Business Analyst at Sports Excitement LLC</strong>, where I build
+          predictive models and interactive dashboards to guide product and marketing strategy. Before that,
+          I spent two years as a <strong>Power BI Analyst</strong> in Pune, India, building dashboards and
+          DAX-driven reporting for cross-functional teams. Outside of work, I lead marketing and communications
+          for UNT's Graduate Student Council.
+        </p>
+        <p>
+          Lately I've been deep in <strong>LLM-powered tooling</strong> — building an end-to-end NLP pipeline
+          that cleaned 800K+ records with GPT, and an AI resume/ATS matcher that uses local embedding models
+          instead of paid APIs. Scroll down to see the live one.
+        </p>
+        <div class="about-education">
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div>
+              <h4>M.S. Data Science</h4>
+              <p>University of North Texas · 2024 – 2026 · GPA 3.9/4</p>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div>
+              <h4>M.S. Computer Science</h4>
+              <p>H.V. Desai College, Pune, India · 2020 – 2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <div class="avatar-blob">
+          <span>AB</span>
+        </div>
+        <div class="orbit-tag" style="--delay:0s; --radius:150px;">Python</div>
+        <div class="orbit-tag" style="--delay:-3s; --radius:150px;">SQL</div>
+        <div class="orbit-tag" style="--delay:-6s; --radius:150px;">Power BI</div>
+        <div class="orbit-tag" style="--delay:-9s; --radius:150px;">LLMs</div>
+        <div class="orbit-tag" style="--delay:-12s; --radius:150px;">Tableau</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="section section-alt" id="skills">
+  <div class="container">
+    <p class="section-kicker reveal">What I Work With</p>
+    <h2 class="section-title reveal">Skills</h2>
+    <div class="skill-filters reveal" id="skillFilters">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="Programming & Data Handling">Programming</button>
+      <button class="chip" data-filter="Data Visualization">Visualization</button>
+      <button class="chip" data-filter="Statistical & Analytical">Statistics</button>
+      <button class="chip" data-filter="Machine Learning & AI">ML & AI</button>
+      <button class="chip" data-filter="Databases & Cloud">Databases & Cloud</button>
+    </div>
+    <div class="skills-grid" id="skillsGrid"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="section" id="experience">
+  <div class="container">
+    <p class="section-kicker reveal">Where I've Worked</p>
+    <h2 class="section-title reveal">Experience</h2>
+    <div class="timeline" id="timeline"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="section section-alt" id="projects">
+  <div class="container">
+    <p class="section-kicker reveal">Selected Work</p>
+    <h2 class="section-title reveal">Projects</h2>
+    <div class="project-filters reveal" id="projectFilters">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="LLM">LLM / AI</button>
+      <button class="chip" data-filter="ML">Machine Learning</button>
+      <button class="chip" data-filter="Data">Data Engineering</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- ===== LIVE DEMO ===== -->
+<section class="section demo-section" id="demo">
+  <div class="container">
+    <p class="section-kicker reveal">Try It Yourself</p>
+    <h2 class="section-title reveal">Live Demo — AI Resume &amp; ATS Matching Engine</h2>
+    <p class="demo-intro reveal">
+      My current project: a tool that checks a resume against a job description two ways — rule-based
+      ATS compatibility checks, and semantic job-match scoring using local embedding models (no paid API
+      required). It's not deployed to a public URL yet, so here's the real thing, straight from my machine.
+    </p>
+    <div class="demo-panel reveal">
+      <div class="demo-shots">
+        <div class="demo-shot-main">
+          <img src="assets/screenshots/demo-1.png" alt="Resume Match Checker — main screen" id="demoMainImg" />
+        </div>
+        <div class="demo-thumbs">
+          <img src="assets/screenshots/demo-1.png" class="thumb active" data-full="assets/screenshots/demo-1.png" alt="thumb 1" />
+          <img src="assets/screenshots/demo-2.png" class="thumb" data-full="assets/screenshots/demo-2.png" alt="thumb 2" />
+          <img src="assets/screenshots/demo-3.png" class="thumb" data-full="assets/screenshots/demo-3.png" alt="thumb 3" />
+          <img src="assets/screenshots/demo-4.png" class="thumb" data-full="assets/screenshots/demo-4.png" alt="thumb 4" />
+        </div>
+      </div>
+      <div class="demo-info">
+        <h3>Resume Match Checker</h3>
+        <p>Streamlit web app + CLI. Splits a job description into requirements, embeds resume bullets
+          locally, and matches by meaning — not just keywords.</p>
+        <ul class="demo-features">
+          <li><span>✅</span> ATS compatibility scoring (missing sections, parsing traps, formatting)</li>
+          <li><span>🧠</span> Semantic requirement matching via local embedding model</li>
+          <li><span>💡</span> Optional Claude-powered gap analysis &amp; rewrite suggestions</li>
+          <li><span>⚡</span> Zero-cost core engine — no external API dependency required</li>
+        </ul>
+        <div class="demo-tags">
+          <span>Python</span><span>Streamlit</span><span>NLP</span><span>Embeddings</span><span>Claude API</span>
+        </div>
+        <div class="demo-cta">
+          <a href="https://github.com/Aditib2000/resume-match-checker" target="_blank" rel="noopener" class="btn btn-primary">
+            View on GitHub
+          </a>
+          <code class="run-cmd">streamlit run app.py</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section class="section">
+  <div class="container">
+    <p class="section-kicker reveal">Recognition</p>
+    <h2 class="section-title reveal">Certifications &amp; Awards</h2>
+    <div class="certs-grid" id="certsGrid"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <p class="section-kicker reveal">Let's Talk</p>
+    <h2 class="section-title reveal">Get In Touch</h2>
+    <p class="contact-sub reveal">Open to Data Science, Analytics, and BI opportunities — reach out any way that's easiest.</p>
+    <div class="contact-grid reveal">
+      <a class="contact-card" href="mailto:aaditibhandari6@gmail.com">
+        <div class="contact-icon">✉️</div>
+        <h4>Email</h4>
+        <p id="emailText">aaditibhandari6@gmail.com</p>
+        <span class="copy-hint">Click to copy</span>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/aaditibhandari/" target="_blank" rel="noopener">
+        <div class="contact-icon">💼</div>
+        <h4>LinkedIn</h4>
+        <p>/in/aaditibhandari</p>
+        <span class="copy-hint">Open profile →</span>
+      </a>
+      <a class="contact-card" href="https://github.com/Aditib2000" target="_blank" rel="noopener">
+        <div class="contact-icon">💻</div>
+        <h4>GitHub</h4>
+        <p>@Aditib2000</p>
+        <span class="copy-hint">Open profile →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>Designed &amp; built by Aaditi Bhandari · <span id="year"></span></p>
+    <a href="#home" class="back-top">Back to top ↑</a>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <img id="lightboxImg" src="" alt="Screenshot preview" />
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
