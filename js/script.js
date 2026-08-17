@@ -72,7 +72,8 @@ const PROJECTS = [
       "ATS compatibility checks + semantic job-match scoring via embeddings"
     ],
     tags: ["Python", "Streamlit", "NLP", "Embeddings", "Claude API"],
-    github: "https://github.com/Aditib2000/resume-match-checker"
+    github: "https://github.com/Aditib2000/resume-match-checker",
+    demo: "https://resume-match-checker-mmaibxqtkbumdzd9hutdqk.streamlit.app/"
   },
   {
     icon: "🧹",
@@ -179,6 +180,7 @@ function renderProjects(filter = "all") {
         <div class="tag-row">${p.tags.map(t => `<span>${t}</span>`).join("")}</div>
         <div class="project-links">
           <a href="${p.github}" target="_blank" rel="noopener">View on GitHub ↗</a>
+          ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener">Live Demo ↗</a>` : ""}
         </div>
       </div>
     </div>
