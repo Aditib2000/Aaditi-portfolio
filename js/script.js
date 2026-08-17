@@ -65,7 +65,6 @@ const PROJECTS = [
     icon: "🎯",
     title: "AI-Powered Resume & ATS Matching Engine",
     tag: "LLM",
-    live: true,
     desc: "An AI-powered resume/JD matcher combining rule-based parsing, NLP, and local embedding models — no external API required for the core engine.",
     highlights: [
       "AI-driven gap analysis to identify skill mismatches and recommend targeted resume improvements",
@@ -73,14 +72,12 @@ const PROJECTS = [
       "ATS compatibility checks + semantic job-match scoring via embeddings"
     ],
     tags: ["Python", "Streamlit", "NLP", "Embeddings", "Claude API"],
-    github: "https://github.com/Aditib2000/resume-match-checker",
-    demoLink: "#demo"
+    github: "https://github.com/Aditib2000/resume-match-checker"
   },
   {
     icon: "🧹",
     title: "Data Cleansing with OpenAI",
     tag: "LLM",
-    live: false,
     desc: "End-to-end NLP pipeline standardizing 800K+ records — from SQL extraction to LLM transformation and database updates.",
     highlights: [
       "Cleaned/preprocessed data with Regex and BeautifulSoup, preserving key business entities",
@@ -89,24 +86,23 @@ const PROJECTS = [
       "Fault-tolerant tracking and recovery for 48+ hour automation workflows"
     ],
     tags: ["Python", "OpenAI GPT", "SQL", "Regex", "BeautifulSoup"],
-    github: null,
-    demoLink: null
+    github: "https://github.com/Aditib2000/data_cleansing_openai"
   },
   {
     icon: "🩺",
     title: "Breast Cancer Data Analysis",
     tag: "ML",
-    live: false,
     desc: "Built and evaluated ML models to predict tumor diagnosis outcomes, identifying key clinical predictors.",
     highlights: [
       "Logistic Regression, Random Forest, and SVM models built with Scikit-learn",
       "Improved performance via feature selection and evaluation metrics (accuracy, precision, recall, ROC-AUC)"
     ],
     tags: ["Python", "Scikit-learn", "Statistics", "Healthcare"],
-    github: null,
-    demoLink: null
+    github: "https://github.com/Aditib2000/Breast-Cancer-Data-Analysis"
   }
 ];
+
+const GITHUB_PROFILE = "https://github.com/Aditib2000";
 
 const CERTS = [
   { icon: "❄️", name: "Snowflake Build Data Engineering Bootcamp", org: "2025 – 2026" },
@@ -175,7 +171,6 @@ function renderProjects(filter = "all") {
   const items = filter === "all" ? PROJECTS : PROJECTS.filter(p => p.tag === filter);
   grid.innerHTML = items.map(p => `
     <div class="project-card">
-      ${p.live ? '<span class="status-live"><span class="dot"></span>ACTIVE PROJECT</span>' : ""}
       <div class="project-card-inner">
         <div class="project-icon">${p.icon}</div>
         <h3>${p.title}</h3>
@@ -183,12 +178,20 @@ function renderProjects(filter = "all") {
         <ul class="project-highlights">${p.highlights.map(h => `<li>${h}</li>`).join("")}</ul>
         <div class="tag-row">${p.tags.map(t => `<span>${t}</span>`).join("")}</div>
         <div class="project-links">
-          ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener">GitHub ↗</a>` : `<span style="color:var(--text-faint); font-size:.85rem;">Private repo</span>`}
-          ${p.demoLink ? `<a href="${p.demoLink}">Live Demo →</a>` : ""}
+          <a href="${p.github}" target="_blank" rel="noopener">View on GitHub ↗</a>
         </div>
       </div>
     </div>
-  `).join("");
+  `).join("") + `
+    <a class="project-card more-card" href="${GITHUB_PROFILE}" target="_blank" rel="noopener">
+      <div class="project-card-inner more-card-inner">
+        <div class="project-icon">🔗</div>
+        <h3>More Projects</h3>
+        <p class="p-desc">Explore the rest of my repos on GitHub.</p>
+        <span class="more-card-cta">View GitHub Profile ↗</span>
+      </div>
+    </a>
+  `;
 }
 
 function renderCerts() {
@@ -352,30 +355,6 @@ window.addEventListener("mousemove", e => {
   glow.style.left = e.clientX + "px";
   glow.style.top = e.clientY + "px";
 }, { passive: true });
-
-// ===================================================================
-// LIGHTBOX (demo screenshots)
-// ===================================================================
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightboxImg");
-const demoMainImg = document.getElementById("demoMainImg");
-
-function openLightbox(src) {
-  lightboxImg.src = src;
-  lightbox.classList.add("open");
-}
-document.getElementById("lightboxClose").addEventListener("click", () => lightbox.classList.remove("open"));
-lightbox.addEventListener("click", e => { if (e.target === lightbox) lightbox.classList.remove("open"); });
-document.addEventListener("keydown", e => { if (e.key === "Escape") lightbox.classList.remove("open"); });
-
-demoMainImg.addEventListener("click", () => openLightbox(demoMainImg.src));
-document.querySelectorAll(".thumb").forEach(thumb => {
-  thumb.addEventListener("click", () => {
-    document.querySelectorAll(".thumb").forEach(t => t.classList.remove("active"));
-    thumb.classList.add("active");
-    demoMainImg.src = thumb.dataset.full;
-  });
-});
 
 // ===================================================================
 // COPY EMAIL

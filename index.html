@@ -25,7 +25,6 @@
       <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
       <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
       <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-      <li><a href="#demo" class="nav-link" data-section="demo">Live Demo</a></li>
       <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
     </ul>
     <div class="nav-actions">
@@ -45,9 +44,9 @@
 <header class="hero" id="home">
   <canvas id="particles"></canvas>
   <div class="hero-inner container">
-    <p class="hero-eyebrow reveal">📍 Charlotte, NC · Open to Data Science & Analytics roles</p>
+    <p class="hero-eyebrow reveal">📍 Charlotte, NC · Open to Data Science, AI &amp; Analytics roles</p>
     <h1 class="hero-title reveal">
-      Hi, I'm <span class="grad-text">Aaditi Bhandari</span>
+      Hi, I am <span class="grad-text">Aaditi</span>
     </h1>
     <div class="hero-role reveal">
       <span>I build </span><span class="typed-role" id="typedRole"></span><span class="cursor-blink">|</span>
@@ -64,7 +63,7 @@
     </div>
     <div class="hero-cta reveal">
       <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="#demo" class="btn btn-outline">See Live Demo</a>
+      <a href="assets/Aaditi_Bhandari_Resume.pdf" download class="btn btn-outline">Download Resume</a>
       <a href="#contact" class="btn btn-ghost">Get In Touch</a>
     </div>
     <div class="hero-social reveal">
@@ -128,7 +127,9 @@
       </div>
       <div class="about-visual reveal">
         <div class="avatar-blob">
-          <span>AB</span>
+          <img src="assets/profile.jpg" alt="Aaditi Bhandari" id="avatarImg"
+               onerror="this.remove(); document.getElementById('avatarInitials').style.display='flex';" />
+          <span id="avatarInitials" style="display:none;">AB</span>
         </div>
         <div class="orbit-tag" style="--delay:0s; --radius:150px;">Python</div>
         <div class="orbit-tag" style="--delay:-3s; --radius:150px;">SQL</div>
@@ -181,52 +182,6 @@
   </div>
 </section>
 
-<!-- ===== LIVE DEMO ===== -->
-<section class="section demo-section" id="demo">
-  <div class="container">
-    <p class="section-kicker reveal">Try It Yourself</p>
-    <h2 class="section-title reveal">Live Demo — AI Resume &amp; ATS Matching Engine</h2>
-    <p class="demo-intro reveal">
-      My current project: a tool that checks a resume against a job description two ways — rule-based
-      ATS compatibility checks, and semantic job-match scoring using local embedding models (no paid API
-      required). It's not deployed to a public URL yet, so here's the real thing, straight from my machine.
-    </p>
-    <div class="demo-panel reveal">
-      <div class="demo-shots">
-        <div class="demo-shot-main">
-          <img src="assets/screenshots/demo-1.png" alt="Resume Match Checker — main screen" id="demoMainImg" />
-        </div>
-        <div class="demo-thumbs">
-          <img src="assets/screenshots/demo-1.png" class="thumb active" data-full="assets/screenshots/demo-1.png" alt="thumb 1" />
-          <img src="assets/screenshots/demo-2.png" class="thumb" data-full="assets/screenshots/demo-2.png" alt="thumb 2" />
-          <img src="assets/screenshots/demo-3.png" class="thumb" data-full="assets/screenshots/demo-3.png" alt="thumb 3" />
-          <img src="assets/screenshots/demo-4.png" class="thumb" data-full="assets/screenshots/demo-4.png" alt="thumb 4" />
-        </div>
-      </div>
-      <div class="demo-info">
-        <h3>Resume Match Checker</h3>
-        <p>Streamlit web app + CLI. Splits a job description into requirements, embeds resume bullets
-          locally, and matches by meaning — not just keywords.</p>
-        <ul class="demo-features">
-          <li><span>✅</span> ATS compatibility scoring (missing sections, parsing traps, formatting)</li>
-          <li><span>🧠</span> Semantic requirement matching via local embedding model</li>
-          <li><span>💡</span> Optional Claude-powered gap analysis &amp; rewrite suggestions</li>
-          <li><span>⚡</span> Zero-cost core engine — no external API dependency required</li>
-        </ul>
-        <div class="demo-tags">
-          <span>Python</span><span>Streamlit</span><span>NLP</span><span>Embeddings</span><span>Claude API</span>
-        </div>
-        <div class="demo-cta">
-          <a href="https://github.com/Aditib2000/resume-match-checker" target="_blank" rel="noopener" class="btn btn-primary">
-            View on GitHub
-          </a>
-          <code class="run-cmd">streamlit run app.py</code>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== CERTIFICATIONS ===== -->
 <section class="section">
   <div class="container">
@@ -273,11 +228,6 @@
     <a href="#home" class="back-top">Back to top ↑</a>
   </div>
 </footer>
-
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose">&times;</button>
-  <img id="lightboxImg" src="" alt="Screenshot preview" />
-</div>
 
 <div class="toast" id="toast"></div>
 
